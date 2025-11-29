@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+    <head>
+        <title>GameMod Studio</title>
+        <link href="style.css" rel="stylesheet">
+        <link href="img/Logo.png" rel="icon">
+        <link rel="stylesheet" href="https://use.typekit.net/zep7kmp.css">
+    </head>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('ServiceWorker enregistré avec succès :', registration.scope);
+                })
+                .catch(error => {
+                    console.log('Échec de l\'enregistrement du ServiceWorker :', error);
+                });
+            });
+        }
+        
+    </script>
+    <style>
+        #Archive1 {
+            height: 100px;
+        }
+        #titre-idex {
+            margin: auto;
+            padding: auto;
+        }
+        h1 {
+            margin-top: 23%;
+            margin-bottom: 27%;
+            font-size: 7em;
+        }
+    </style>
+    <body>
+        <header>
+            <h1>GameMod Studio</h1>
+        </header>
+        <br>
+        <main id="Index">
+            <div class="group">
+                <section class="border">
+                    <h2><a href="jeux.html">Nos Jeux</a></h2>
+                </section>
+                <section class="border">
+                    <h2><a href="membres.html">Nos membres</a></h2>
+                    <h3>Eclaire31</h3>
+                </section>
+                <section class="border">
+                    <h2><a href="archive.html">Archive</a></h2>
+                    <p>Cherchez dans nos archive pour retrouvez des anciens jeu et logo</p>
+                </section>
+                <section class="border">
+                    <h2><a href="credit.html">Crédit</a></h2>
+                    <p><a href="https://fonts.adobe.com/">Adobe font</a></p>
+                    <p><a href="https://express.adobe.com/">Adobe express</a></p>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

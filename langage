@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GameMod Studio</title>
+        <link href="style.css" rel="stylesheet">
+        <link href="img/Logo.png" rel="icon">
+        <link rel="stylesheet" href="https://use.typekit.net/zep7kmp.css">
+    </head>
+    <style>
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slides {
+            display: flex;
+            width: 300%; /* 100% par image */
+            height: 100%;
+            animation: slide 12s infinite; /* 4s par image (3 images) */
+        }
+        
+        .slides img {
+            width: 33.333%; /* 100% / nombre d'images */
+            height: 100%;
+            object-fit: cover;
+        }
+
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(0); }
+        36% { transform: translateX(-33.333%); }
+        66% { transform: translateX(-33.333%); }
+        69% { transform: translateX(-66.666%); }
+        97% { transform: translateX(-66.666%); }
+        100% { transform: translateX(0); }
+    }
+    </style>
+    <body>
+        <header>
+            <h1>Gamemod Studio</h1>
+        </header>
+        <nav><div data-include="nav"></div></nav>
+        <script src="nav.js" defer></script>
+        <main>
+            <div class="slider">
+                    <div class="slides">
+                        <img src="img/Langage/Logo_TurboWarp.svg" alt="Image 1" id="image1">
+                        <img src="img/Langage/html.svg" alt="Image 2" id="image2">
+                        <img src="img/Langage/css.svg" alt="Image 3" id="image3">
+                    </div>
+            </div>
+        </main>
+    </body>
+</html>
+https://fr.wikipedia.org/wiki/Fichier:HTML5_logo_and_wordmark.svg
+https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png
